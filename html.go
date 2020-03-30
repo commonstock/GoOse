@@ -23,7 +23,7 @@ func NewHtmlRequester(config Configuration) HtmlRequester {
 
 func (hr htmlrequester) fetchHTML(url string) (string, error) {
 	client := resty.New()
-	client.SetTimeout(hr.config.timeout)
+	client.SetTimeout(hr.config.Timeout)
 	resp, err := client.R().
 		SetHeader("Content-Type", "application/json").
 		SetHeader("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_7) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.91 Safari/534.30").

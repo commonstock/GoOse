@@ -25,7 +25,7 @@ type Configuration struct {
 	stopWords     StopWords
 	parser        *Parser
 
-	timeout time.Duration
+	Timeout time.Duration
 }
 
 // GetDefaultConfiguration returns safe default configuration options
@@ -46,7 +46,7 @@ func GetDefaultConfiguration(args ...string) Configuration {
 			stopWordsPath:           "resources/stopwords",
 			stopWords:               NewStopwords(), //TODO with path
 			parser:                  NewParser(),
-			timeout:                 time.Duration(5 * time.Second),
+			Timeout:                 time.Duration(5 * time.Second),
 		}
 	}
 	return Configuration{
@@ -64,6 +64,6 @@ func GetDefaultConfiguration(args ...string) Configuration {
 		stopWordsPath:           "resources/stopwords",
 		stopWords:               NewStopwords(), //TODO with path
 		parser:                  NewParser(),
-		timeout:                 time.Duration(5 * time.Second),
+		Timeout:                 time.Duration(5 * time.Second),
 	}
 }
